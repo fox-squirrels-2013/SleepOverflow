@@ -12,11 +12,21 @@
     <div id="logo">
     </div>
 
+<!-- <div class="clock">
+    <div class="m m-10"></div>
+    <div class="h h-10"></div>
+    </div>
+ -->
 </nav>
 
-<div>
+<div id="photo-display">
   <% @photos.each do |photo| %>
   <% url = photo.url %>
     <img src=<%= url %>/>
   <% end %>
 </div>
+
+<!-- We should definitely figure out how to use the rails way  -->
+<!-- instead of using the shitty quick-fix on line 20  -->
+<!-- it works, but is really not that cool  -->
+
