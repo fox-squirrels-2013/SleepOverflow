@@ -11,7 +11,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 RSpec.configure do |config|
 
   ###in order to use the request helpers from spec/support/request_helpers/testing###
-  config.include Requests::ModuleName (TwitterHelpersTesting), type: :request
+  # config.include Requests::ModuleName (TwitterHelpersTesting), type: :request
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
