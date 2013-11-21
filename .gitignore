@@ -16,3 +16,6 @@
 
 /ignored
 /config/twitter.yaml
+
+# Ignore the coverage files
+/coverage/*

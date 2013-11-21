@@ -41,3 +41,9 @@ test:
   encoding: unicode
   database: sleep-overflow_test
   pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: sleep-overflow_production
+  pool: 5
