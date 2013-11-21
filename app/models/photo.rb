@@ -15,5 +15,5 @@ def self.photo_create(response)
   end
 end
 
-self.photo_create(search_object)
+# self.photo_create(search_object)
 end
