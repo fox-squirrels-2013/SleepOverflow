@@ -6,6 +6,7 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'twitter'
 
 
 # Gems used only for assets and not required
@@ -21,6 +22,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
 
 group :test, :development do
   gem 'capybara', '2.1.0'

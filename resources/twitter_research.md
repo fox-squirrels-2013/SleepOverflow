@@ -11,8 +11,11 @@ Resources Found:
 Specific Twitpic API call that we will probably use
 http://dev.twitpic.com/docs/2/tags_show/
 
-Most obvious library for ruby-twitpic interaction
+<!-- Most obvious library for ruby-twitpic interaction
 https://github.com/stevencorona/ruby-twitpic
+ -->
+ This gem blows, not updated for two years and way more stuff than we require
+
 
 Probable DATASHAPE returned from queries (Twitter entities for 'media')
 https://dev.twitter.com/docs/entities
