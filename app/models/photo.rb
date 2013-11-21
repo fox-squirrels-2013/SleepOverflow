@@ -3,4 +3,5 @@ class Photo < ActiveRecord::Base
 
   validates :url, presence: true, uniqueness: true
   validates :created_at, presence: true
+# self.photo_create(search_object)
 end
