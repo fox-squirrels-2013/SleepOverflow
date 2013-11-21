@@ -10,3 +10,10 @@
   <div id="logo">
   </div>
 </nav>
+
+<div>
+  <% @photos.each do |photo| %>
+  <% url = photo.url %>
+    <img src=<%= url %>/>
+  <% end %>
+</div>
