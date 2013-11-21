@@ -45,11 +45,3 @@ test:
   pool: 5
   username: sleep-overflow
   password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: sleep-overflow_production
-  pool: 5
-  username: sleep-overflow
-  password:
