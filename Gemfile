@@ -24,9 +24,12 @@ end
 gem 'jquery-rails'
 
 
+
 group :test, :development do
   gem 'capybara', '2.1.0'
   gem 'rspec-rails', '~> 2.0'
+  ##shows test coverage
+	gem 'simplecov', :require => false
 end
 
 # To use ActiveModel has_secure_password
@@ -36,7 +39,7 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+#gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
