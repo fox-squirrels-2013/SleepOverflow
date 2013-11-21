@@ -15,9 +15,8 @@ ActiveRecord::Schema.define(:version => 20131121005935) do
 
   create_table "photos", :force => true do |t|
     t.string   "url"
-    t.string   "twitter_created"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string   "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
