@@ -1,4 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :developer unless Rails.env.production?
   if ENV['TWITTER_KEY'].blank? || ENV['TWITTER_SECRET'].blank?
     warn "*" * 80
     warn "WARNING: Missing consumer key or secret. First, register an app with Twitter at"
