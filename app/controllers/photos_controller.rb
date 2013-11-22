@@ -15,4 +15,9 @@ class PhotosController < ApplicationController
 
     @photos = Photo.all
   end
+
+  def show
+
+  end
+
 end
