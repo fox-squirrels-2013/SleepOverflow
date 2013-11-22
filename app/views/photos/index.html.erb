@@ -1,12 +1,7 @@
 
-<div id="photo-display">
+<div class="photo-display">
   <% @photos.each do |photo| %>
-  <% url = photo.url %>
-    <img src=<%= url %>/>
+    <%= link_to image_tag("#{photo.url}"), photo %>
   <% end %>
 </div>
-
-<!-- We should definitely figure out how to use the rails way  -->
-<!-- instead of using the shitty quick-fix on line 20  -->
-<!-- it works, but is really not that cool  -->
 
