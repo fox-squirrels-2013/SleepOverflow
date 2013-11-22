@@ -15,6 +15,10 @@ describe PhotosController do
       expect(assigns(:photo)).to be_an_instance_of(Photo)
     end
 
+    it 'receives data from Twitter' do
+      twitter_response = CLIENT.search("#dbcsleeps")
+      expect(twitter_response).to be_an_instance_of(Twitter::SearchResults)
+    end
 end
 
 
