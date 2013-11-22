@@ -1,5 +1,5 @@
 html {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0969A2), to(#162bae));
+  background-color: #0969A2;
 }
 
 @font-face{
@@ -88,6 +88,91 @@ nav h1 {
 .photo-display img {
   padding-top: 10px;
 }
+
+#comment-box {
+    margin: 0 auto;
+    width: 65%;
+    /*background-color: #064a72;*/
+    border-bottom-color: #064a72;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #064a72;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #064a72;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #064a72;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: 1px 1px 1px 1px black;
+
+}
+
+#comment-content{
+  width: 50px;
+  height: 10%;
+
+}
+
+#comment-box input {
+  display: block;
+  /*background-color: white;*/
+  border-bottom-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: white;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: white;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: .5px .5px 6px 0px black;
+  border-color: black;
+}
+
+#submit-button {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0969A2), to(#064a72));
+  color: white;
+  height: 30px;
+}
+
+#submit-button:hover {
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-property: box-shadow;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+  transition-property: color;
+  transition-duration: .1s;
+  transition-timing-function: linear;
+  background: -webkit-gradient(linear, left top, left bottom, from(#064a72), to(#053a5a));
+  box-shadow: .5px .5px 6px 0px black inset;
+}
+
+#submit-button:active{
+  transition-property: color;
+  transition-duration: .1s;
+  transition-timing-function: linear;
+  color: #FEB600;
+}
+
+
 
 /*.clock {
   background: url('clock-circle.png') no-repeat center center;
