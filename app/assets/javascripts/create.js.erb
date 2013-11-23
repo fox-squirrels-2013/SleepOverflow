@@ -1,13 +1,14 @@
 $(function() {
 
-    $('#submit-button').on('ajax:success', function(event, xhr, status) {
+//maybe set the id of the form and then come back here to change it in the ajax call
+    $('form').on('ajax:success', function(event, data, status) {
+      // console.log("a form was posted")
+      // console.log(data)
   // insert the failure message inside the "#account_settings" element
-    $('#comment-box').append(xhr.responseText)
+
+    $('#comment-display').append('<p>' + data['bender']['content'] + '</p>')
+    $('#comment-display').append('<p>' + data['bender']['username'] + '</p>')
   });
-
-
-
-
 
 });
 
