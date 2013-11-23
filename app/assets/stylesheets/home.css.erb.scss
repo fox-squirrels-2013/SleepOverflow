@@ -29,6 +29,15 @@ nav h1 {
   display: inline;
 }
 
+#comment-head {
+  text-align: center;
+}
+
+#comments-headline {
+  display: inline-block;
+  width: 50%;
+  margin-top: 20px;
+}
 
 #sleep-hash {
   float: left;
@@ -85,14 +94,25 @@ nav h1 {
   padding-top: 10px;
 }
 
-.photo-display img {
-  padding-top: 10px;
+.photo-display-single {
+  width: 50%;
+  text-align: center;
+  float: left;
+  clear: both;
 }
+
+.photo-display {
+  padding-top: 10px;
+  text-align: center;
+
+}
+
+
 
 #comment-box {
     margin: 0 auto;
-    width: 65%;
-    /*background-color: #064a72;*/
+    width: 50%;
+    background-color: #064a72;
     border-bottom-color: #064a72;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -110,16 +130,11 @@ nav h1 {
     border-top-style: solid;
     border-top-width: 1px;
     box-shadow: 1px 1px 1px 1px black;
-
+    margin-top: 20px;
 }
 
-#comment-content{
-  width: 50px;
-  height: 10%;
 
-}
-
-#comment-box input {
+#comment-box input, textarea {
   display: block;
   /*background-color: white;*/
   border-bottom-color: white;
@@ -140,12 +155,13 @@ nav h1 {
     border-top-width: 1px;
     box-shadow: .5px .5px 6px 0px black;
   border-color: black;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 #submit-button {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 5px;
   background: -webkit-gradient(linear, left top, left bottom, from(#0969A2), to(#064a72));
   color: white;
   height: 30px;
