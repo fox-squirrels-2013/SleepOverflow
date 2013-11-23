@@ -1,4 +1,4 @@
-<div class="photo-display">
+<div class="photo-display-single">
     <%= image_tag(@photo.url)%>
     <% @photo.comments.each do |comment| %>
     <p><%= comment.username %></p>
@@ -13,12 +13,10 @@
     <%= f.submit "Comment", :id => 'submit-button' %>
     <% end %>
   </div>
-
   <br>
   <br>
   <br>
   <br>
-
 </div>
 
 
