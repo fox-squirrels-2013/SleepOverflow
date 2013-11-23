@@ -1,0 +1,13 @@
+$(function() {
+
+    $('#submit-button').on('ajax:success', function(event, xhr, status) {
+  // insert the failure message inside the "#account_settings" element
+    $('#comment-box').append(xhr.responseText)
+  });
+
+
+
+
+
+});
+

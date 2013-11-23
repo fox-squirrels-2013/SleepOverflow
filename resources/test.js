@@ -117,5 +117,8 @@ $(document).ready(function(e) {
 
 
 
+<!-- @article, :remote => true, :html => {"data-type" => :json})
+
+  Name:<%= form_for (:comment, :remote => true, :html => {"data-type" => :json}) do |f| %> -->
 
 

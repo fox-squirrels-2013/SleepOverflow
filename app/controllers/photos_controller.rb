@@ -8,8 +8,8 @@ class PhotosController < ApplicationController
       url = tweet_object[:entities][:media][0][:media_url_https]
       created_at = tweet_object[:created_at]
       Photo.create(url: url, created_at: created_at)
-      end
     end
+  end
 
     generate_photo_stream(search_object)
 
