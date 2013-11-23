@@ -2,10 +2,11 @@
     <%= image_tag(@photo.url)%>
 
   <div id="comment-box">
-    Name:<%= form_for :comment do |f| %>
-    <%= f.text_field :username,  :placeholder => "username" %>
+    Name:<%= form_for :comment, :remote => true do |f| %>
+    <%= f.text_field :username,  :placeholder => "username"%>
     <%= f.text_area :content, :placeholder => "Comment..." %>
-    <%= f.submit "Comment", :id => 'submit-button' %>
+    <%= f.submit "Comment", :id => 'submit-button', :action => 'create_comment' :method => :post%>
+
     <% end %>
   </div>
   <br>
@@ -14,4 +15,5 @@
   <br>
 
 </div>
+
 

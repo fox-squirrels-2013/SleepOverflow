@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
 
     search_object = CLIENT.search("#dbcsleeps")
 
-    def generate_photo_stream(response)
+  def generate_photo_stream(response)
     response.attrs[:statuses].each do |tweet_object|
       url = tweet_object[:entities][:media][0][:media_url_https]
       created_at = tweet_object[:created_at]
