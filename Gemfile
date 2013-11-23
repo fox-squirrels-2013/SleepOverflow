@@ -29,7 +29,7 @@ group :test, :development do
   gem 'capybara', '2.1.0'
   gem 'annotate'
   gem 'rspec-rails', '~> 2.0'
-  ##shows test coverage
+  gem 'shoulda-matchers'
 	gem 'simplecov', :require => false
   gem 'better_errors'
   gem 'binding_of_caller'
