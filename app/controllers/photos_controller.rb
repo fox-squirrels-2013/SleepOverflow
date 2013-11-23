@@ -17,8 +17,12 @@ class PhotosController < ApplicationController
   end
 
   def show
-    p params
+<<<<<<< HEAD
+=======
+    # p params
+>>>>>>> 6e9ebe60d1ee885ef24aca4d6e3ba9202d73b29c
     @photo = Photo.find(params[:id])
+    @comment = Comment.new
   end
 
 end

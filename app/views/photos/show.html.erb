@@ -1,3 +1,19 @@
-<div class="photo-display">
+<div class="photo-display-single">
     <%= image_tag(@photo.url)%>
 </div>
+
+<div id="comments-headline">
+
+  <h1 id="comment-head">Comments:</h1>
+
+  <div id="comment-box">
+    <%= form_for :comment do |f| %>
+    <%= f.text_field :username,  :placeholder => "Name" %>
+    <%= f.text_area :content, :placeholder => "Comment..." %>
+    <%= f.submit "Comment", :id => 'submit-button' %>
+    <% end %>
+  </div>
+
+</div>
+
+
