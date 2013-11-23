@@ -1,5 +1,7 @@
 SleepOverflow::Application.routes.draw do
-  resources :photos
+  resources :photos do
+    resources :comments
+  end
   root :to => "photos#index"
 
   get '/auth/twitter/callback', to: 'sessions#create', as: 'callback'

@@ -6,7 +6,5 @@ class CreatePhotoTable < ActiveRecord::Migration
 
       t.timestamps
     end
-
   end
-
 end
