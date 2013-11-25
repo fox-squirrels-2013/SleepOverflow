@@ -1,0 +1,24 @@
+$(function() {
+
+//maybe set the id of the form and then come back here to change it in the ajax call
+    $('form').on('ajax:success', function(event, data, status) {
+      // console.log("a form was posted")
+      // console.log(data)
+  // insert the failure message inside the "#account_settings" element
+
+    $('#comment-display').append('<p>' + data['bender']['content'] + '</p>')
+    $('#comment-display').append('<p>' + data['bender']['username'] + '</p>')
+    $('#comment_text').val('')
+    $('#user_text').val('')
+  });
+
+});
+
+//TODO
+
+//Hey guys, I would like to make it so that when someone comments on this, the comment doesn't just show up
+//under the username, but rather, the entire thing looks something like this:
+//Thomas Watson:  Wow, what a sleeping person that is!
+//I am really at a loss for how to do this because the ajax renders the username and content first and all else
+//second.  Open to any and all ideas to get comments looking better.  Now they are totally functional.
+

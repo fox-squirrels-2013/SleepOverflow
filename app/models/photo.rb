@@ -12,7 +12,7 @@
 
 class Photo < ActiveRecord::Base
   attr_accessible :url, :created_at
-
+  has_many :comments
   validates :url, presence: true, uniqueness: true
   validates :created_at, presence: true
 # self.photo_create(search_object)
