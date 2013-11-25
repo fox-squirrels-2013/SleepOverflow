@@ -4,15 +4,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(params[:comment])
     @comment.photo_id = params[:photo_id]
     @comment.save
-    # redirect_to photo_path(params[:photo_id])
-
-
-      p "dicks"
-      p "more dicks"
+    # Having specifed that I wanted to render json, I had to make up a key for the rest of it, hence, bender
       render :json => {bender: @comment }
-      p "even more dicks"
-
-
   end
-
 end

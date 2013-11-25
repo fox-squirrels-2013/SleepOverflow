@@ -2,16 +2,15 @@
     <%= image_tag(@photo.url)%>
   <div id="comment-display">
     <% @photo.comments.each do |comment| %>
-    <p><%= comment.content %></p>
     <p><%= comment.username %></p>
+    <p><%= comment.content %></p>
     <% end %>
   </div>
 
-
   <div id="comment-box">
-    Name:<%= form_for :comment, :url => photo_comments_path(@photo.id), :remote => true do |f| %>
-    <%= f.text_field :username,  :placeholder => "username" %>
-    <%= f.text_area :content, :placeholder => "Comment..." %>
+    Leave a Comment:<%= form_for :comment, :url => photo_comments_path(@photo.id), :remote => true do |f| %>
+    <%= f.text_field :username, :placeholder => "Preferably your real name", :id => 'user_text' %>
+    <%= f.text_field :content, :placeholder => "An appropriate comment", :id => 'comment_text' %>
     <%= f.submit "Comment", :id => 'submit-button' %>
     <% end %>
   </div>
