@@ -27,17 +27,18 @@
     </div>
  -->
 </nav>
-
+<div class='authentication'>
 <% if @user %>
   <div class-"sign-out">
     <%= form_tag(signout_path, :method => 'delete') do %>
-      <fieldset>
+        <legend>
+          <%= t("#{@user.screen_name}, Sign out") %>
+        </legend>
         <div class="form-actions">
           <button class="btn btn-danger" id="sign_out">
             <%= t("button.sign_out") %>
           </button>
         </div>
-      </fieldset>
     <% end %>
   </div>
 <% else %>
@@ -54,6 +55,7 @@
     <% end %>
   </div>
 <% end %>
+</div>
 
 <%= yield %>
 
