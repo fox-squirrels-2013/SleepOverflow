@@ -7,8 +7,7 @@ class SessionsController < ApplicationController
   end
 
   def show
-    if session['access_token'] && session['access_secret']
-      @user = client.user(include_entities: true)
+    if current_user
       @photos = Photo.all
       render :template => 'photos/index'
     else
