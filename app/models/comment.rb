@@ -11,7 +11,7 @@
 #
 
 class Comment < ActiveRecord::Base
-  attr_accessible :photos_id
+  attr_accessible :photos_id, :content, :username
   belongs_to :photo
   validates :content, presence: true
   validates :username, presence: true
