@@ -27,6 +27,35 @@
     </div>
  -->
 </nav>
+<div class='authentication'>
+<% if @user %>
+  <div class="sign-out">
+    <%= form_tag(signout_path, :method => 'delete') do %>
+        <legend>
+          <%= t("#{@user.screen_name}, Sign out") %>
+        </legend>
+        <div class="form-actions">
+          <button class="btn-custom-lighten" id="sign_out">
+            <%= t("button.sign_out") %>
+          </button>
+        </div>
+    <% end %>
+  </div>
+<% else %>
+ <div>
+  <%= form_tag "/auth/twitter", :method => "get", :html => {:class => "form-horizontal"} do %>
+        <legend>
+          <%= t("Sign in via Twitter") %>
+        </legend>
+      <div class="sign-in">
+          <button class="btn-custom-lighten">
+            <%= t("button.sign_in") %>
+          </button>
+        </div>
+    <% end %>
+  </div>
+<% end %>
+</div>
 
 <%= yield %>
 

@@ -6,7 +6,10 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'omniauth'
+gem 'omniauth-twitter'
 gem 'twitter'
+gem 'twitter-text'
 
 
 # Gems used only for assets and not required
@@ -23,7 +26,10 @@ end
 
 gem 'jquery-rails'
 
-
+group :production do
+  gem 'puma'
+end
+#puma is A MODERN, CONCURRENT WEB SERVER FOR RUBY. Not sure if we need it or if there are better options
 
 group :test, :development do
   gem 'capybara', '2.1.0'
