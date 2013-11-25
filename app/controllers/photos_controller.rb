@@ -1,25 +1,25 @@
 class PhotosController < ApplicationController
+  before_filter :authenticate_user, :only => [:index]
+
   def index
-
     search_object = CLIENT.search("#dbcsleeps")
-
-  def generate_photo_stream(response)
-    response.attrs[:statuses].each do |tweet_object|
-      url = tweet_object[:entities][:media][0][:media_url_https]
-      created_at = tweet_object[:created_at]
-      Photo.create(url: url, created_at: created_at)
-    end
-  end
-
-    generate_photo_stream(search_object)
-
+    Photo.create_from_tweets search_object.attrs[:statuses]
     @photos = Photo.all
   end
 
   def show
+    # line 12 makes no sense
     current_user
     @photo = Photo.find(params[:id])
     @comment = Comment.new
   end
 
+  private
+  def authenticate_user
+    redirect_to failure_path unless current_user
+  end
+
+  def generate_photo_stream(response)
+
+  end
 end

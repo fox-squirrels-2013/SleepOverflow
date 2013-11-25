@@ -1,6 +1,6 @@
 <div class="photo-display">
   <% @photos.each do |photo| %>
-    <%= link_to image_tag("#{photo.url}"), photo %>
+    <%= link_to image_tag(photo.url), photo %>
   <% end %>
 </div>
 

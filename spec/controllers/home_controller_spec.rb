@@ -1,3 +1,4 @@
+# commented code is evil!
 # require 'spec_helper'
 
 # describe HomeController do

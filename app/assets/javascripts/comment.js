@@ -1,19 +1,12 @@
 $(function() {
-  var commentTemplate = function(user, message){
-    return "<p>" + user + ": " + message + "</p>"
-  }
-
-
 //maybe set the id of the form and then come back here to change it in the ajax call
     $('form').on('ajax:success', function(event, data, status) {
       // console.log("a form was posted")
       // console.log(data)
   // insert the failure message inside the "#account_settings" element
-    var username = data['bender']['username']
-    var content = data['bender']['content']
-    $('#comment-display').append(commentTemplate(username, content))
-    $('#comment_text').val('')
-    $('#user_text').val('')
+      $('#comment-display').append(data)
+      $('#comment_text').val('')
+      $('#user_text').val('')
   });
 
 });

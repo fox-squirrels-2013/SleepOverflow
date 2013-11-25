@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include ApplicationHelper
+  include Authentication
   protect_from_forgery
 
 
@@ -11,4 +11,6 @@ class ApplicationController < ActionController::Base
       config.oauth_token_secret = session['access_secret']
     end
   end
+
+  helper_method :current_user
 end

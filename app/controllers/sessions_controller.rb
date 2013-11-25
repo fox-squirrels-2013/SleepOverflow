@@ -1,23 +1,10 @@
 class SessionsController < ApplicationController
 
   def create
+    # move 5 and 6 to a named method and include it in the authentication.rb
     session[:access_token] = request.env['omniauth.auth']['credentials']['token']
     session[:access_secret] = request.env['omniauth.auth']['credentials']['secret']
-    redirect_to show_path, notice: "Signed in"
-  end
-
-  def show
-    if current_user
-      @photos = Photo.all
-      render :template => 'photos/index'
-    else
-      redirect_to failure_path
-    end
-  end
-
-  def error
-    flash[:error] = "Sign in with Twitter failed"
-    redirect_to root_path
+    redirect_to root_path, notice: "Signed in"
   end
 
   def destroy
