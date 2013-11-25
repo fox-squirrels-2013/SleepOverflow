@@ -1,19 +1,25 @@
 <div class="photo-display-single">
     <%= image_tag(@photo.url)%>
-</div>
-
-<div id="comments-headline">
-
-  <h1 id="comment-head">Comments:</h1>
-
-  <div id="comment-box">
-    <%= form_for :comment do |f| %>
-    <%= f.text_field :username,  :placeholder => "Name" %>
-    <%= f.text_area :content, :placeholder => "Comment..." %>
-    <%= f.submit "Comment", :id => 'submit-button' %>
+  <div id="comment-display">
+    <% @photo.comments.each do |comment| %>
+    <p><%= comment.username + ": " + comment.content%></p>
     <% end %>
   </div>
 
+<% if @user %>
+  <div id="comment-box">
+    Leave a Comment:<%= form_for :comment, :url => photo_comments_path(@photo.id), :remote => true do |f| %>
+    <%= f.hidden_field :username, :value => @user.screen_name %>
+    <%= f.text_field :content, :placeholder => "An appropriate comment", :id => 'comment_text' %>
+    <%= f.submit "Comment", :id => 'submit-button' %>
+    <% end %>
+  </div>
+  <% end %>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>
+
 
 

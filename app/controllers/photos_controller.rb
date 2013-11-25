@@ -3,13 +3,13 @@ class PhotosController < ApplicationController
 
     search_object = CLIENT.search("#dbcsleeps")
 
-    def generate_photo_stream(response)
+  def generate_photo_stream(response)
     response.attrs[:statuses].each do |tweet_object|
       url = tweet_object[:entities][:media][0][:media_url_https]
       created_at = tweet_object[:created_at]
       Photo.create(url: url, created_at: created_at)
-      end
     end
+  end
 
     generate_photo_stream(search_object)
 
@@ -17,10 +17,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-<<<<<<< HEAD
-=======
-    # p params
->>>>>>> 6e9ebe60d1ee885ef24aca4d6e3ba9202d73b29c
+    current_user
     @photo = Photo.find(params[:id])
     @comment = Comment.new
   end
