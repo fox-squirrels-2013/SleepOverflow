@@ -2,8 +2,8 @@
     <%= image_tag(@photo.url)%>
   <div id="comment-display">
     <% @photo.comments.each do |comment| %>
-    <p><%= comment.username %></p>
     <p><%= comment.content %></p>
+    <p><%= comment.username %></p>
     <% end %>
   </div>
 
