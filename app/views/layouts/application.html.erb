@@ -29,13 +29,13 @@
 </nav>
 <div class='authentication'>
 <% if @user %>
-  <div class-"sign-out">
+  <div class="sign-out">
     <%= form_tag(signout_path, :method => 'delete') do %>
         <legend>
           <%= t("#{@user.screen_name}, Sign out") %>
         </legend>
         <div class="form-actions">
-          <button class="btn btn-danger" id="sign_out">
+          <button class="btn-custom-lighten" id="sign_out">
             <%= t("button.sign_out") %>
           </button>
         </div>
@@ -48,7 +48,7 @@
           <%= t("Sign in via Twitter") %>
         </legend>
       <div class="sign-in">
-          <button class="btn btn-large btn-primary">
+          <button class="btn-custom-lighten">
             <%= t("button.sign_in") %>
           </button>
         </div>
